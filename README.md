@@ -15,3 +15,8 @@ Technology Used:
 Requirement for running the code : Chrome or firefox browser
 <br/>
 <br/>
+
+<img src="Images/MobileView.png"/>
+<img src="Images/Index page.png"/>
+<img src="Images/footerMobileview.png"/>
+<img src="Images/searchResult.png"/>
