@@ -132,9 +132,7 @@
 		function searchArticle()
 		{
 			document.getElementById("pagination-content").innerHTML="";
-			
 			var outjson="";
-			
 			console.log("search");
 			var count=0;
 			for(var i=1;i<out.length;i++)
@@ -145,15 +143,23 @@
 				count++;
 				}
 			}
-			console.log("search called"+count);
+			//console.log("search called"+count);
 			document.getElementById("content").innerHTML=outjson;
-			if(count==0)
-			document.getElementById("content").innerHTML="<h4>No results!</h4>"
+			document.getElementById("searchresult").innerHTML=count+" results found!!";
+			if(count==0){
+			document.getElementById("content").innerHTML="<h4>No results!</h4>";
+			document.getElementById("searchresult").innerHTML="";
+			}
 			if(document.getElementById('search').value=="")
-				{if(isSortedElements==1)
-				printSortedData(1);
-				else
-				printData(1);
+				{	if(isSortedElements==1)
+					{
+					printSortedData(1);
+					document.getElementById("searchresult").innerHTML="";
+					}
+					else{
+					printData(1);
+					document.getElementById("searchresult").innerHTML="";
+					}
 				}
 		}
 		</script>
@@ -188,14 +194,13 @@
 		 </div>
  
   </div>
-  <br/><br/>
-  <div id="content">
-	
-  </div>
- <div id="pagination-content" style="width:100%;text-align:center;">
- 
-
-  </div>
+  <br/>
+  <div id="searchresult" style="text-align:right;"></div>
+  <br/>
+	  <div id="content">
+	  </div>
+	 <div id="pagination-content" style="width:100%;text-align:center;">
+	 </div>
  </div>
  
  
