@@ -49,7 +49,7 @@
 			console.log(out.length);
 			for(var i=pgid;i<pgid+10 && i<out.length;i++)
 			{	
-				outjson+=("<br/><a href=\""+out[i].url+"\" class=\"news-element\" style=\"text-decoration:none;\"><div id=\"news-content\" style=\"border:1px solid #ddd; border-left:3.5px solid orange; padding:3px; padding-left:15px; \"><h4>"+i+"  "+out[i].title+"</h4><h6 style=\"color:gray;\">"+out[i].num_points+" points by "+ out[i].author+" | "+out[i].num_comments+" comments</h6></div>	</a>");
+				outjson+=("<br/><a href=\""+out[i].url+"\" class=\"news-element\" style=\"text-decoration:none;\"><div id=\"news-content\" style=\"border:1px solid #ddd; border-left:3.5px solid orange; padding:3px; padding-left:15px; \"><h4>"+i+".  "+out[i].title+"</h4><h6 style=\"color:gray;\">"+out[i].num_points+" points by "+ out[i].author+" | "+out[i].num_comments+" comments</h6></div>	</a>");
 			}
 			
 			document.getElementById("content").innerHTML=outjson;
@@ -79,7 +79,7 @@
 			console.log(isSortedElements);
 			for(var i=pgid;i<pgid+10 && i<items.length;i++)
 			{	
-				outjson+=("<br/><a href=\""+items[i-1].url+"\" class=\"news-element\" style=\"text-decoration:none;\"><div id=\"news-content\" style=\"border:1px solid #ddd; border-left:3.5px solid orange; padding:3px; padding-left:15px; \"><h4>"+i+"  "+items[i-1].title+"</h4><h6 style=\"color:gray;\">"+items[i-1].num_points+" points by "+ items[i-1].author+" | "+items[i-1].num_comments+" comments</h6></div>	</a>");
+				outjson+=("<br/><a href=\""+items[i-1].url+"\" class=\"news-element\" style=\"text-decoration:none;\"><div id=\"news-content\" style=\"border:1px solid #ddd; border-left:3.5px solid orange; padding:3px; padding-left:15px; \"><h4>"+i+".  "+items[i-1].title+"</h4><h6 style=\"color:gray;\">"+items[i-1].num_points+" points by "+ items[i-1].author+" | "+items[i-1].num_comments+" comments</h6></div>	</a>");
 			}
 			
 			document.getElementById("content").innerHTML=outjson;
@@ -124,7 +124,6 @@
 					else
 					{
 					sortItem(pgid);
-					
 					}
 					document.getElementById('filter').style.color="#2980b9";
 				}
@@ -139,7 +138,7 @@
 			{	
 				var a=new RegExp( document.getElementById('search').value.toLowerCase() );
 				if(a.test(out[i].title.toLowerCase()))
-				{ outjson+=("<br/><a href=\""+out[i].url+"\" class=\"news-element\" style=\"text-decoration:none;\"><div id=\"news-content\" style=\"border:1px solid #ddd; border-left:3.5px solid orange; padding:3px; padding-left:15px; \"><h4>"+i+"  "+out[i].title+"</h4><h6 style=\"color:gray;\">"+out[i].num_points+" points by "+ out[i].author+" | "+out[i].num_comments+" comments</h6></div>	</a>");
+				{ outjson+=("<br/><a href=\""+out[i].url+"\" class=\"news-element\" style=\"text-decoration:none;\"><div id=\"news-content\" style=\"border:1px solid #ddd; border-left:3.5px solid orange; padding:3px; padding-left:15px; \"><h4>"+i+".  "+out[i].title+"</h4><h6 style=\"color:gray;\">"+out[i].num_points+" points by "+ out[i].author+" | "+out[i].num_comments+" comments</h6></div>	</a>");
 				count++;
 				}
 			}
@@ -199,7 +198,7 @@
   <br/>
 	  <div id="content">
 	  </div>
-	 <div id="pagination-content" style="width:100%;text-align:center;">
+	 <div id="pagination-content" style="width:100%;text-align:center; padding-left:0;padding-right:0; margin-left:0;margin-right:0">
 	 </div>
  </div>
  
