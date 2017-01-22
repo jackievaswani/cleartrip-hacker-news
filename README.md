@@ -1,7 +1,7 @@
 Features added:<br/>
  1. Responsive / Mobile compatible web application<br/>
  2. Search  option<br/>
- 3. Filter by name<br/>
+ 3. Filter- sort by name<br/>
  4. Pagination<br/><br/>
 
 Technology Used:
