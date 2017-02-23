@@ -1,3 +1,5 @@
+Problem statement:<br/>To make news feed from json input and features like filter, search and pagination should be added.
+<br/>
 Features added:<br/>
  1. Responsive / Mobile compatible web application<br/>
  2. Search  option<br/>
